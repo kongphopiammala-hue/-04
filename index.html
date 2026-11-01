@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FANG & FLINT — เกมเอาชีวิตรอดในโลกดึกดำบรรพ์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Ember Canvas -->
+  <canvas id="emberCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+        <span class="logo-text">FANG <span class="accent-amp">&</span> FLINT</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">เกี่ยวกับเกม</a>
+        <a href="#survival" class="nav-link">ระบบเอาชีวิตรอด</a>
+        <a href="#equipment" class="nav-link">คลังอุปกรณ์ & คราฟต์</a>
+        <a href="#beasts" class="nav-link">สัตว์ดึกดำบรรพ์</a>
+        <a href="#specs" class="nav-link">สเปกเครื่อง</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#equipment" class="btn-primary-nav">
+          <i class="fa-solid fa-hammer"></i> สำรวจอุปกรณ์
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-shield-halved"></i> OPEN-WORLD PREHISTORIC SURVIVAL
+      </div>
+      <h1 class="hero-title">
+        FANG <span class="text-fire">&</span> FLINT
+      </h1>
+      <p class="hero-quote">
+        "เมื่อหินเหล็กไฟคืออาวุธ และความมืดมิดคือมฤตยู — จงปลุกสัญชาตญาณดิบเพื่อรอดจนถึงรุ่งสาง"
+      </p>
+      <p class="hero-desc">
+        สัมผัสประสบการณ์เกม Survival Sandbox ในยุคก่อนประวัติศาสตร์ ตื่นขึ้นมาด้วยมือเปล่ากลางผืนป่าที่ไร้ความปรานี 
+        ล่าสัตว์ร้าย ประดิษฐ์เครื่องมือจากกระดูกและหิน สร้างถิ่นฐาน และต่อสู้เพื่อความอยู่รอดของเผ่าพันธุ์
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#equipment" class="btn btn-primary">
+          <i class="fa-solid fa-axe"></i> คลังอุปกรณ์และอาวุธ
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          <i class="fa-solid fa-compass"></i> สำรวจโลกของเกม
+        </a>
+      </div>
+
+      <div class="hero-features-bar">
+        <div class="feature-item">
+          <i class="fa-solid fa-temperature-three-quarters"></i>
+          <div>
+            <strong>Dynamic Climate</strong>
+            <span>พายุหิมะ เปลวภูเขาไฟ และหมอกพิษ</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-bone"></i>
+          <div>
+            <strong>Primal Crafting</strong>
+            <span>คราฟต์กว่า 120+ อุปกรณ์ยุคหิน</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-paw"></i>
+          <div>
+            <strong>Apex Predators</strong>
+            <span>เผชิญหน้าสัตว์ยักษ์ดึกดำบรรพ์</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-users"></i>
+          <div>
+            <strong>Tribe Co-op</strong>
+            <span>ร่วมมือสร้างเผ่าสูงสุด 8 คน</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title"><i class="fa-solid fa-skull"></i> THE PRIMAL WORLD</span>
+        <h2 class="section-title">โลกของ FANG & FLINT คืออะไร?</h2>
+        <div class="title-divider"></div>
+        <p class="section-intro">
+          คุณตื่นขึ้นมาบนชายฝั่งที่ปกคลุมด้วยไอหมอกดึกดำบรรพ์ ไร้เสื้อผ้า ไร้ความทรงจำ และไร้เทคโนโลยี 
+          โลกใบนี้ถูกครอบครองโดยธรรมชาติอันบ้าคลั่ง สัตว์นักล่ายักษ์ที่สาบสูญไปนับล้านปี และชนเผ่าโบราณคู่แข่ง
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-icon"><i class="fa-solid fa-campground"></i></div>
+          <h3>ไร้ความเมตตาจากธรรมชาติ</h3>
+          <p>
+            ความหิว กระหายน้ำ ความเหน็บหนาว และพิษจากสัตว์เลื้อยคลาน 
+            ทุกวินาทีคือการต่อสู้กับดัชนีทางกายภาพที่พร้อมจะพรากชีวิตคุณได้ทุกเมื่อ
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-icon"><i class="fa-solid fa-fire"></i></div>
+          <h3>ไฟคือเส้นแบ่งระหว่างรอดกับตาย</h3>
+          <p>
+            ในค่ำคืนที่มืดสนิท สัตว์นักล่าสายพันธุ์ดึกดำบรรพ์จะออกล่าด้วยกลิ่นเลือด 
+            กองไฟไม่เพียงแต่ให้ความอบอุ่นและปรุงอาหาร แต่ยังเป็นสิ่งเดียวที่ไล่ความตายให้อยู่ห่างออกไป
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+          <h3>ระบบนิเวศมีชีวิต 100%</h3>
+          <p>
+            สิ่งมีชีวิตในเกมมีพฤติกรรมตามสัญชาตญาณจริง พวกมันล่า ดื่มน้ำ นอนหลับ และอพยพตามฤดูกาล 
+            คุณสามารถใช้สิ่งแวดล้อมให้เป็นประโยชน์ เช่น ล่อไทรเซอราทอปส์ไปชนรังแรปเตอร์
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Survival Mechanics Section -->
+  <section class="section survival-section" id="survival">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title"><i class="fa-solid fa-heart-pulse"></i> SURVIVAL PILLARS</span>
+        <h2 class="section-title">4 เสาหลักแห่งการเอาชีวิตรอด</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-box">
+          <div class="pillar-number">01</div>
+          <div class="pillar-content">
+            <h4><i class="fa-solid fa-droplet"></i> การควบคุมสถานะชีวภาพ</h4>
+            <p>จัดการระดับน้ำในร่างกาย แคลอรี อุณหภูมิ และระดับความเหนื่อยล้า การกินเนื้อดิบอาจทำให้ติดเชื้อพยาธิโบราณ</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> ดื่มน้ำสะอาดจากลำธารต้นน้ำ</li>
+              <li><i class="fa-solid fa-check"></i> พกพาพืชสมุนไพรถอนพิษ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-number">02</div>
+          <div class="pillar-content">
+            <h4><i class="fa-solid fa-cubes-stacked"></i> การรวบรวมวัตถุดิบปฐมกาล</h4>
+            <p>เก็บกิ่งไม้ กะเทาะหินเหล็กไฟ ขูดเส้นใยจากเถาวัลย์ และถลกหนังสัตว์ ทุกสิ่งในป่าล้วนเป็นวัสดุตั้งต้น</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> กะเทาะหินเพื่อสร้างคมตัด</li>
+              <li><i class="fa-solid fa-check"></i> สกัดยางไม้สำหรับเชื้อเพลิง</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-number">03</div>
+          <div class="pillar-content">
+            <h4><i class="fa-solid fa-crosshairs"></i> สัญชาตญาณการล่าและซ่อนตัว</h4>
+            <p>อ่านรอยเท้า ตรวจทิศทางลมเพื่อไม่ให้สัตว์ได้กลิ่น หมอบในพงหญ้า และใช้กับดักเพื่อล้มสัตว์ขนาดยักษ์</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> เดินทวนลมเมื่อเข้าใกล้เป้าหมาย</li>
+              <li><i class="fa-solid fa-check"></i> ชโลมโคลนเพื่ออำพรางกลิ่นเหงื่อ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-number">04</div>
+          <div class="pillar-content">
+            <h4><i class="fa-solid fa-fort-awesome"></i> การสร้างป้อมปราการชนเผ่า</h4>
+            <p>จากเพิงใบไม้ชั่วคราว สู่ค่ายกำแพงหินขวากกระดูกที่ป้องกันการบุกทำลายของไดโนเสาร์และสัตว์ดุร้าย</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> ปักขวากหนามรอบบริเวณนอน</li>
+              <li><i class="fa-solid fa-check"></i> ก่อแท่นบูชาไฟเพื่อความอบอุ่น</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment & Crafting Section (MAIN FOCUS) -->
+  <section class="section equipment-section" id="equipment">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title"><i class="fa-solid fa-hammer"></i> ARSENAL & SURVIVAL GEAR</span>
+        <h2 class="section-title">คลังอุปกรณ์และอาวุธยุคดึกดำบรรพ์</h2>
+        <div class="title-divider"></div>
+        <p class="section-intro">
+          ใน FANG & FLINT อุปกรณ์ทุกชิ้นไม่ได้ซื้อมาด้วยเงิน แต่สร้างขึ้นจากหยาดเหงื่อและเลือด 
+          คลิกเลือกหมวดหมู่และกดดูรายละเอียดอุปกรณ์เพื่อดูสูตรคราฟต์และประสิทธิภาพ!
+        </p>
+      </div>
+
+      <!-- Equipment Category Filters -->
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> ทั้งหมด (<span id="count-all">0</span>)
+        </button>
+        <button class="filter-btn" data-filter="weapons">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> อาวุธล่าสัตว์ (<span id="count-weapons">0</span>)
+        </button>
+        <button class="filter-btn" data-filter="tools">
+          <i class="fa-solid fa-hammer"></i> เครื่องมือยังชีพ (<span id="count-tools">0</span>)
+        </button>
+        <button class="filter-btn" data-filter="armor">
+          <i class="fa-solid fa-shield-halved"></i> ชุดเกราะ & ป้องกัน (<span id="count-armor">0</span>)
+        </button>
+        <button class="filter-btn" data-filter="survival">
+          <i class="fa-solid fa-fire"></i> แคมป์ & ยารักษา (<span id="count-survival">0</span>)
+        </button>
+      </div>
+
+      <!-- Equipment Grid (Populated dynamically & statically styled) -->
+      <div class="equipment-grid" id="equipmentGrid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Prehistoric Beasts Showcase -->
+  <section class="section beasts-section" id="beasts">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title"><i class="fa-solid fa-dragon"></i> CREATURES OF THE WILD</span>
+        <h2 class="section-title">สัตว์ร้ายและภัยคุกคามแห่งยุคโบราณ</h2>
+        <div class="title-divider"></div>
+        <p class="section-intro">
+          พวกมันไม่ได้เป็นเพียงเป้าหมายในการล่า แต่คือผู้ปกครองห่วงโซ่อาหารที่คุณต้องเรียนรู้ที่จะหลบหลีกหรือพิชิต
+        </p>
+      </div>
+
+      <div class="beasts-grid">
+        <div class="beast-card">
+          <div class="beast-tag danger-high">อันตรายระดับสูง</div>
+          <div class="beast-icon"><i class="fa-solid fa-tooth"></i></div>
+          <h3>เสือเขี้ยวดาบสไมโลดอน (Smilodon)</h3>
+          <p class="beast-habitat"><i class="fa-solid fa-location-dot"></i> ป่าสนหนาทึบและทุ่งหญ้าหุบเขา</p>
+          <p class="beast-desc">
+            นักล่าผู้ซุ่มโจมตีในเงามืด กระโจนด้วยความเร็วสูงและใช้เขี้ยวหน้ายาว 18 ซม. เจาะเส้นเลือดใหญ่ที่ลำคอ 
+            วิธีรอด: พกคบเพลิงไฟ สัตว์ตระกูลนี้หวาดกลัวประกายไฟ
+          </p>
+          <div class="beast-drops">
+            <span><strong>ไอเทมดรอป:</strong> หนังหนาพิเศษ, เขี้ยวยักษ์ (ทำมีดคมกริบ), เนื้อแดงชั้นดี</span>
+          </div>
+        </div>
+
+        <div class="beast-card">
+          <div class="beast-tag danger-extreme">อันตรายระดับวิกฤต</div>
+          <div class="beast-icon"><i class="fa-solid fa-skull-crossbones"></i></div>
+          <h3>คาร์โนทอรัสเขายักษ์ (Carnotaurus)</h3>
+          <p class="beast-habitat"><i class="fa-solid fa-location-dot"></i> ที่ราบลุ่มและเขตแม่น้ำสายหลัก</p>
+          <p class="beast-desc">
+            ไดโนเสาร์กินเนื้อพันธุ์ดุร้ายที่มีเขาแหลมเหนือเบ้าตา วิ่งได้เร็วเกือบ 50 กม./ชม. มีพฤติกรรมหวงถิ่นรุนแรง 
+            วิธีรอด: ล่อเข้าสู่หลุมขวากกระดูกหรือช่องแคบหินที่มันลอดไม่ได้
+          </p>
+          <div class="beast-drops">
+            <span><strong>ไอเทมดรอป:</strong> กะโหลกเขาหิน (ทำเกราะหมวก), กระดูกสันหลังใหญ่, เส้นเอ็นเหนียว</span>
+          </div>
+        </div>
+
+        <div class="beast-card">
+          <div class="beast-tag danger-medium">อันตรายระดับปานกลาง</div>
+          <div class="beast-icon"><i class="fa-solid fa-feather"></i></div>
+          <h3>แรปเตอร์ล่าฝูง (Pack Raptor)</h3>
+          <p class="beast-habitat"><i class="fa-solid fa-location-dot"></i> ทั่วทุกพื้นที่ โดยเฉพาะยามพลบค่ำ</p>
+          <p class="beast-desc">
+            ไม่เคยมาตัวเดียว พวกมันล่าเป็นฝูง 3-5 ตัว สื่อสารด้วยเสียงหวีดร้องแหลม และโจมตีประสานงานรอบทิศทาง 
+            วิธีรอด: ถอยหลังเข้าชิดหน้าผาหินแล้วใช้หอกสกัดระยะประชิด
+          </p>
+          <div class="beast-drops">
+            <span><strong>ไอเทมดรอป:</strong> กรงเล็บโค้งเสี้ยวพระจันทร์, ขนนกกันหนาว, เลือดกระตุ้นประสาท</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Requirements Section -->
+  <section class="section specs-section" id="specs">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title"><i class="fa-solid fa-desktop"></i> PC SYSTEM REQUIREMENTS</span>
+        <h2 class="section-title">อุปกรณ์และสเปกเครื่องสำหรับเล่นเกม</h2>
+        <div class="title-divider"></div>
+        <p class="section-intro">
+          สัมผัสภาพกราฟิกความละเอียดสูง แสงเงาของเปลวไฟ และฟิสิกส์การทำลายล้างที่สมจริง
+        </p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="specs-card">
+          <div class="specs-badge">ขั้นต่ำ (1080p @ 30 FPS)</div>
+          <h3>MINIMUM SPECS</h3>
+          <ul class="specs-list">
+            <li><strong>ระบบปฏิบัติการ:</strong> Windows 10 (64-bit)</li>
+            <li><strong>หน่วยประมวลผล (CPU):</strong> Intel Core i5-8400 หรือ AMD Ryzen 5 2600</li>
+            <li><strong>การ์ดจอ (GPU):</strong> NVIDIA GTX 1060 (6GB) หรือ AMD Radeon RX 580</li>
+            <li><strong>แรม (RAM):</strong> 12 GB RAM</li>
+            <li><strong>พื้นที่จัดเก็บ:</strong> 60 GB SSD (แนะนำให้ลงบน SSD)</li>
+            <li><strong>อุปกรณ์เสริม:</strong> รองรับ คีย์บอร์ด/เมาส์ และ คอนโทรลเลอร์ Xbox / DualSense</li>
+          </ul>
+        </div>
+
+        <div class="specs-card recommended">
+          <div class="specs-badge glow">แนะนำ (1440p / 4K @ 60+ FPS)</div>
+          <h3>RECOMMENDED SPECS</h3>
+          <ul class="specs-list">
+            <li><strong>ระบบปฏิบัติการ:</strong> Windows 11 (64-bit)</li>
+            <li><strong>หน่วยประมวลผล (CPU):</strong> Intel Core i7-12700K หรือ AMD Ryzen 7 7700X</li>
+            <li><strong>การ์ดจอ (GPU):</strong> NVIDIA RTX 4070 (12GB) หรือ AMD Radeon RX 7800 XT</li>
+            <li><strong>แรม (RAM):</strong> 32 GB DDR5 High-Speed</li>
+            <li><strong>พื้นที่จัดเก็บ:</strong> 60 GB NVMe M.2 SSD</li>
+            <li><strong>ระบบเสียง:</strong> หูฟัง Spatial Audio 7.1 (สำหรับฟังเสียงฝีเท้าสัตว์ในป่า)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community / Call To Action Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <i class="fa-solid fa-fire-burner cta-flame"></i>
+        <h2>พร้อมจะปลุกสัญชาตญาณนักล่าในตัวคุณแล้วหรือยัง?</h2>
+        <p>
+          เข้าร่วมคอมมูนิตี้ชนเผ่า แลกเปลี่ยนสูตรคราฟต์อุปกรณ์ และรับข่าวสารการทดสอบ Alpha Test ก่อนใคร
+        </p>
+        <div class="cta-form">
+          <input type="email" placeholder="กรอกอีเมลของคุณเพื่อรับแจ้งเตือน..." id="emailInput">
+          <button class="btn btn-primary" id="subscribeBtn">
+            <i class="fa-solid fa-paper-plane"></i> เข้าร่วมทดสอบ
+          </button>
+        </div>
+        <p class="cta-note">*ไม่มีสแปม และสามารถยกเลิกการติดตามได้ตลอดเวลา</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Item Detail Modal -->
+  <div class="modal-overlay" id="itemModal">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modalBody">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <i class="fa-solid fa-fire-flame-curved"></i> FANG & FLINT
+        </div>
+        <p>เกมจำลองการเอาชีวิตรอดในยุคดึกดำบรรพ์ พัฒนาเพื่อผู้เล่นที่หลงใหลในความสมจริงและความท้าทาย</p>
+      </div>
+      <div class="footer-links">
+        <h4>ลิงก์ด่วน</h4>
+        <a href="#about">เรื่องราวของเกม</a>
+        <a href="#survival">ระบบการเล่น</a>
+        <a href="#equipment">รายการอุปกรณ์</a>
+        <a href="#specs">สเปกอุปกรณ์ที่ใช้เล่น</a>
+      </div>
+      <div class="footer-social">
+        <h4>ติดตามเรา</h4>
+        <div class="social-icons">
+          <a href="#" title="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" title="Steam"><i class="fa-brands fa-steam"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FANG & FLINT Studio. สงวนลิขสิทธิ์ทุกประการ | ออกแบบและสร้างสรรค์เพื่อคอเกมเอาชีวิตรอด</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
